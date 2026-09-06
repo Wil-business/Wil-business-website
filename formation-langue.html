@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Kou Lang — Wil Business</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f5f8ff;color:#172033}.hero{background:linear-gradient(135deg,#111,#315bff);color:white;text-align:center;padding:35px 18px}.hero a{color:white}.box{max-width:760px;margin:20px auto;background:white;border-radius:16px;padding:22px;box-shadow:0 5px 20px #0001}h1{margin:8px 0}h2{color:#173b9c}.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.level{padding:16px;border-radius:12px;background:#eef3ff;text-align:center}.lesson{border-left:4px solid #315bff;padding:12px;margin:12px 0;background:#f8faff}.btn{display:block;width:100%;box-sizing:border-box;padding:14px;margin-top:12px;border:0;border-radius:10px;background:#315bff;color:white;font-weight:bold;cursor:pointer;text-align:center;text-decoration:none}.free{background:#eaffef;border:2px solid #36a269}.hidden{display:none}textarea,input,select{width:100%;box-sizing:border-box;padding:12px;border:1px solid #ccd3e0;border-radius:8px;margin-top:6px}.msg{margin-top:12px;padding:12px;border-radius:8px}.ok{background:#eaffef}.err{background:#ffecec}@media(max-width:600px){.levels{grid-template-columns:1fr}}
+</style></head>
+<body>
+<div class="hero"><a href="index.html">← Tounen sou Wil Business</a><h1>🗣️ Kou Lang Wil Business</h1><p>Debitan → Entèmedyè → Avanse</p><p>Aprann pale, konprann epi reponn nan lavi chak jou.</p></div>
+<div class="box free"><h2>🗣️ Konvèsasyon — GRATIS</h2><p>Eseye sistèm konvèsasyon an anvan ou achte kou konplè a.</p><select id="lang"><option>Angle</option><option>Panyòl</option><option>Franse</option></select><textarea id="ans" rows="3" placeholder="Ekri repons ou isit la..."></textarea><button class="btn" onclick="gratis()">Kòmanse konvèsasyon gratis</button><div id="freeMsg"></div></div>
+<div class="box"><h2>📚 Pwogram konplè a</h2><div class="levels"><div class="level"><b>1️⃣ Debitan</b><br>Fondasyon lang lan</div><div class="level"><b>2️⃣ Entèmedyè</b><br>Konvèsasyon chak jou</div><div class="level"><b>3️⃣ Avanse</b><br>Konvèsasyon reyèl</div></div>
+<div class="lesson"><b>Debitan 1 — Baz lang lan</b><p>Salitasyon, prezantasyon, nimewo, jou, lè, fanmi, travay ak vokabilè chak jou.</p><p><b>Egzèsis:</b> Ekri 10 fraz pou prezante tèt ou.</p></div>
+<div class="lesson"><b>Debitan 2 — Tande epi konprann</b><p>Kesyon ak repons senp, mo kle ak ti dyalòg moun itilize souvan.</p><p><b>Egzèsis:</b> Li yon dyalòg epi reponn kestyon sou li.</p></div>
+<div class="lesson"><b>Entèmedyè 1 — Konvèsasyon chak jou</b><p>Fanmi, travay, manje, vwayaj, acha, sèvis ak sitiyasyon sosyal.</p><p><b>Egzèsis:</b> Fè yon dyalòg kote w ap achte yon pwodwi.</p></div>
+<div class="lesson"><b>Entèmedyè 2 — Reponn san bloke</b><p>Aprann mande enfòmasyon, esplike tèt ou, mande moun repete epi bay repons natirèl.</p><p><b>Egzèsis:</b> Reponn 10 kestyon san tradiktè.</p></div>
+<div class="lesson"><b>Avanse 1 — Konvèsasyon reyèl</b><p>Opinyon, pwoblèm, solisyon, negosyasyon ak ekspresyon natirèl.</p><p><b>Egzèsis:</b> Fè yon konvèsasyon 3–5 minit sou yon sijè.</p></div>
+<div class="lesson"><b>Avanse 2 — Preparasyon final</b><p>Revizyon tout nivo yo, dyalòg konplè ak simulation sitiyasyon reyèl.</p></div>
+<div class="lesson"><b>🏆 Egzamen final + Sètifika</b><p>Teste vokabilè, konpreyansyon, kestyon/repons ak kapasite pou fè yon bon konvèsasyon.</p></div>
+</div>
+<div class="box"><h2>🔐 Aksè kou konplè</h2><p>Kou konplè a se yon fòmasyon peye. Pou pri ak enskripsyon, kontakte Wil Business.</p><a class="btn" href="https://wa.me/18292702586" target="_blank">Kontakte Wil Business sou WhatsApp</a><p>Aprè enskripsyon, w ap resevwa kòd aksè ou.</p><input id="code" placeholder="Antre kòd aksè ou"><button class="btn" onclick="unlock()">Debloke kou a</button><div id="lockMsg"></div><div id="paid" class="hidden"><p class="ok">✅ Kòd la aksepte. Kontni kou a disponib pou ou.</p><p>Travay leson yo nan lòd: Debitan → Entèmedyè → Avanse, fè egzèsis yo, epi prepare w pou egzamen final la.</p></div></div>
+<script>
+function gratis(){var a=document.getElementById('ans').value.trim(),l=document.getElementById('lang').value,m=document.getElementById('freeMsg');var q={Angle:'Hello! What is your name and where are you from?',Panyòl:'¡Hola! ¿Cómo te llamas y de dónde eres?',Franse:'Bonjour ! Comment tu t’appelles et d’où viens-tu?'};if(!a){m.className='msg err';m.textContent='✍️ Ekri yon repons pou kòmanse.';return}m.className='msg ok';m.innerHTML='<b>'+l+'</b><br>Kesyon: '+q[l]+'<br>✅ Bon kòmansman! Kontinye pratike.'}
+function unlock(){var c=document.getElementById('code').value.trim().toUpperCase(),m=document.getElementById('lockMsg');if(!c){m.className='msg err';m.textContent='Antre kòd aksè ou.';return}m.className='msg ok';m.textContent='Kòd ou ap verifye. Pou yon aksè reyèl, Wil Business dwe ba ou kòd la.';if(c.length>=6){document.getElementById('paid').classList.remove('hidden')}}
+</script></body></html>
